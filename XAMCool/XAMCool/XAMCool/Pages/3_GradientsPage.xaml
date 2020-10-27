@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAMCool.Pages._3_GradientsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Background="Black"
+    NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Margin="0,50,0,0">
+        <Frame
+            BorderColor="Yellow"
+            CornerRadius="12"
+            HasShadow="True"
+            HeightRequest="120"
+            WidthRequest="120">
+            <Frame.Background>
+                <!--  StartPoint defaults to (0,0)  -->
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Offset="0.1" Color="Yellow" />
+                    <GradientStop Offset="1.0" Color="Green" />
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAMCool.Pages._4_TransitionPPBPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".3*" />
+                <RowDefinition Height=".7*" />
+            </Grid.RowDefinitions>
+            <Image Source="{Binding Contact.Image}" 
+                   sharedTransitions:Transition.Name="Image"/>
+            <Label
+                Grid.Row="1"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Contact.Name}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

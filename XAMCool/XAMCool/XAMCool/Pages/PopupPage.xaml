@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="XAMCool.Pages.PopupPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+
+    <Frame
+        BackgroundColor="Black"
+        BorderColor="White"
+        CornerRadius="10"
+        HorizontalOptions="Center"
+        Opacity="0.7"
+        VerticalOptions="Center">
+        <Grid>
+            <Grid.ColumnDefinitions />
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".8*" />
+                <RowDefinition Height=".2*" />
+            </Grid.RowDefinitions>
+            <lottie:AnimationView
+                x:Name="LottieView"
+                Grid.Row="0"
+                Animation="food2.json"
+                AutoPlay="True"
+                Loop="True" />
+            <Label
+                x:Name="message"
+                Grid.Row="1"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </Grid>
+    </Frame>
+
+</pages:PopupPage>

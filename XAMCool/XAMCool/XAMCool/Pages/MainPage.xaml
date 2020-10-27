@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAMCool.Pages.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout>
+        <Label
+            BackgroundColor="Navy"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="PARALLAX DEMOS"
+            TextColor="White" />
+        <Button Command="{Binding TopParallaxCommand}" Text="Top Parallax" />
+        <Button Command="{Binding ListViewParallaxCommand}" Text="ListView Parallax" />
+        <Button Command="{Binding GradientsCommand}" Text="Gradients" />
+        <Label
+            BackgroundColor="Navy"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="TRANSITION DEMOS"
+            TextColor="White" />
+        <Button Command="{Binding TransitionPPCommand}" Text="Transition Page" />
+        <Button Command="{Binding ControlTransitionsCommand}" Text="Controls Transitions Page" />
+        <Label
+            BackgroundColor="Navy"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="VALIDATION DEMOS"
+            TextColor="White" />
+        <Button Command="{Binding ValidationsCommand}" Text="Validations Page" />
+        <Label
+            BackgroundColor="Navy"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="ANIMATION DEMOS"
+            TextColor="White" />
+        <Button Command="{Binding LottieCommand}" Text="Lottie Page" />
+        <Label
+            BackgroundColor="Navy"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="LOADERS DEMOS"
+            TextColor="White" />
+        <Button Command="{Binding LoaderCommand}" Text="Loader Page" />
+        <Label
+            BackgroundColor="Navy"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="SHAPES DEMOS"
+            TextColor="White" />
+        <Button Command="{Binding ShapesCommand}" Text="Shapes Page" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAMCool.Pages._6_ValidacionesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0">
+            <inputLayout:SfTextInputLayout
+                ErrorColor="DarkRed"
+                ErrorText="Invalid Name"
+                HasError="{Binding HasError}"
+                Hint="Your Name">
+                <Entry Text="{Binding Name}" />
+            </inputLayout:SfTextInputLayout>
+
+            <Button Command="{Binding SendCommand}" Text="SEND" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

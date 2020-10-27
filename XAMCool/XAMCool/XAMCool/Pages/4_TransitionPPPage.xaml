@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAMCool.Pages._4_TransitionPPPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+    Background="DarkBlue"
+    NavigationPage.HasNavigationBar="False">
+
+    <CollectionView
+        ItemsSource="{Binding Items}"
+        SelectedItem="{Binding SelectedItem}"
+        SelectionChangedCommand="{Binding TransitionCommand}"
+        SelectionMode="Single">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout ItemSpacing="5" Orientation="Vertical" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid
+                    Padding="20,10,20,0"
+                    ColumnSpacing="5"
+                    HeightRequest="120"
+                    RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.99*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition>
+                                <ColumnDefinition.Width>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On Platform="UWP">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.1*"
+                                                Phone="0.3*"
+                                                Tablet="0.2*" />
+                                        </On>
+                                        <On Platform="Android">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.1*"
+                                                Phone="0.3*"
+                                                Tablet="0.2*" />
+                                        </On>
+                                        <On Platform="iOS">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.1*"
+                                                Phone="0.3*"
+                                                Tablet="0.2*" />
+                                        </On>
+                                    </OnPlatform>
+                                </ColumnDefinition.Width>
+                            </ColumnDefinition>
+                            <ColumnDefinition>
+                                <ColumnDefinition.Width>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On Platform="UWP">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.8*"
+                                                Phone="0.7*"
+                                                Tablet="0.8*" />
+                                        </On>
+                                        <On Platform="Android">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.8*"
+                                                Phone="0.7*"
+                                                Tablet="0.8*" />
+                                        </On>
+                                        <On Platform="iOS">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.8*"
+                                                Phone="0.7*"
+                                                Tablet="0.8*" />
+                                        </On>
+                                    </OnPlatform>
+                                </ColumnDefinition.Width>
+                            </ColumnDefinition>
+                            <ColumnDefinition>
+                                <ColumnDefinition.Width>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On Platform="UWP">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.1*"
+                                                Phone="0.1*"
+                                                Tablet="0.1*" />
+                                        </On>
+                                        <On Platform="Android">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.1*"
+                                                Phone="0.1*"
+                                                Tablet="0.1*" />
+                                        </On>
+                                        <On Platform="iOS">
+                                            <OnIdiom
+                                                x:TypeArguments="GridLength"
+                                                Desktop="0.1*"
+                                                Phone="0.1*"
+                                                Tablet="0.1*" />
+                                        </On>
+                                    </OnPlatform>
+                                </ColumnDefinition.Width>
+                            </ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            sharedTransitions:Transition.Group="{Binding Id}"
+                            sharedTransitions:Transition.Name="Image"
+                            Aspect="AspectFit"
+                            BackgroundColor="Transparent"
+                            HeightRequest="450"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="{Binding Image}"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="450" />
+                        <StackLayout
+                            Grid.Column="1"
+                            Padding="10,0,0,0"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Vertical"
+                            VerticalOptions="CenterAndExpand">
+                            <Label
+                                HorizontalOptions="Start"
+                                Text="{Binding Name}"
+                                TextColor="White">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <OnPlatform.WinPhone>
+                                            <OnIdiom
+                                                x:TypeArguments="x:Double"
+                                                Desktop="20"
+                                                Phone="18"
+                                                Tablet="20" />
+                                        </OnPlatform.WinPhone>
+                                        <OnPlatform.Android>
+                                            <OnIdiom
+                                                x:TypeArguments="x:Double"
+                                                Desktop="20"
+                                                Phone="18"
+                                                Tablet="20" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <OnIdiom
+                                                x:TypeArguments="x:Double"
+                                                Desktop="20"
+                                                Phone="18"
+                                                Tablet="20" />
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
+                                </Label.FontSize>
+                            </Label>
+                            <Label
+                                HorizontalOptions="Start"
+                                Text="{Binding Author}"
+                                TextColor="#E4E4E4">
+                                <Label.FontSize>
+                                    <OnPlatform x:TypeArguments="x:Double">
+                                        <OnPlatform.WinPhone>
+                                            <OnIdiom
+                                                x:TypeArguments="x:Double"
+                                                Desktop="15"
+                                                Phone="12"
+                                                Tablet="15" />
+                                        </OnPlatform.WinPhone>
+                                        <OnPlatform.Android>
+                                            <OnIdiom
+                                                x:TypeArguments="x:Double"
+                                                Desktop="15"
+                                                Phone="12"
+                                                Tablet="15" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <OnIdiom
+                                                x:TypeArguments="x:Double"
+                                                Desktop="15"
+                                                Phone="12"
+                                                Tablet="15" />
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
+                                </Label.FontSize>
+                            </Label>
+                        </StackLayout>
+                    </Grid>
+                    <StackLayout
+                        Grid.Row="1"
+                        Margin="5,0,5,0"
+                        BackgroundColor="White"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        Opacity="0.15" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>

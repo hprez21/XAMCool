@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAMCool.Pages._5_Controls_TransitionsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Behaviors>
+                <xamanimation:EntranceTransition Duration="1000" />
+            </StackLayout.Behaviors>
+
+            <Label
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="Welcome to Xamarin.Forms!" />
+            <Image Source="monkeys.png" />
+            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan nisl sapien, in consequat lectus maximus et. Nullam pulvinar purus purus, sit amet ornare leo maximus ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ultrices laoreet lobortis. Aliquam porttitor lacinia finibus. Donec et mi eu diam ultricies molestie. Morbi interdum sagittis nulla, id facilisis est consectetur at." />
+            <Label Text="Vivamus fringilla risus a neque varius lobortis. Duis justo eros, pellentesque eget erat imperdiet, imperdiet euismod ante. Nullam ac enim quis turpis vestibulum accumsan quis sed lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla nunc ut eros tempor, at facilisis justo pretium. Curabitur at nibh quam. In id finibus augue. Sed sit amet est id orci tempor tempor et eget elit. Quisque et enim quis orci bibendum fermentum. Integer vitae ante egestas, rhoncus lectus eu, congue est. Phasellus at aliquam sem. Nulla ac vestibulum tellus. Mauris egestas sit amet eros eu malesuada." />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
